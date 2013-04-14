@@ -69,15 +69,15 @@
         <div><h1>
             <img alt="" style="height:100%;" src="Image/yummy_logo.jpg" /></h1></div>
         <div>
-            <p class="heading2" style="position:absolute; text-align:right; top: 120px; right:20px;">Sign in</p>
-            <p class="heading2" style="position:absolute; text-align:right; top: 120px; right:100px;">Register</p>
+            <a  class="heading2" style="position:absolute; text-align:right; top: 120px; right:20px;" href="Login.aspx">Sign in</a>
+            <a class="heading2" style="position:absolute; text-align:right; top: 120px; right:100px;" href="Register.aspx">Register</a>
         </div>
     </div>
 <div>
-    <div class="bodyleft" style="float:left;position:absolute; width:32.8%; height:400px; top:190px">BU West</div>
-    <div class="bodycenter"style="left:33.5%; position:absolute; width:33%;height:400px;top:190px">
-        BU Central</div>
-    <div class="bodyright" style="left:66.7%;position: absolute; width: 33%; height: 400px; top: 190px;">BU East</div>
+    <div class="bodyleft" style="float:left;position:absolute; width:32.8%; height:400px; top:190px"><a href="BUWest.aspx">BU West</a></div>
+    <div class="bodycenter"style="left:33.5%; position:absolute; width:33%;height:400px;top:190px"><a href="BUCentral.aspx">
+        BU Central</a></div>
+    <div class="bodyright" style="left:66.7%;position: absolute; width: 33%; height: 400px; top: 190px;"><a href="BUEast.aspx"> East</a></div>
     </div>
     </form>
 </body>
