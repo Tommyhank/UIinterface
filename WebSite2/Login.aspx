@@ -8,9 +8,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Table]"></asp:SqlDataSource>
     <div>
     
     </div>
+        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
+        </asp:Login>
     </form>
 </body>
 </html>
