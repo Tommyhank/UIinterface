@@ -1,12 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="WebSite2_Register" %>
 
+<%@ Register src="Usercontrol/buttom.ascx" tagname="buttom" tagprefix="uc1" %>
+<%@ Register src="Usercontrol/head.ascx" tagname="head" tagprefix="uc2" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Register</title>
     <style type="text/css">
-        .global{
+        .global1{
             float: right;
             width: 66%;
         }
@@ -79,10 +82,11 @@
 
     </script>
 </head>
-<body class="global">
+<body>
     <form id="form1" runat="server">
     <div>
-        <h1 style="color: black; text-align: left">
+        <uc2:head ID="head1" runat="server" />
+        
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT ID, username, password, email FROM [Table]" InsertCommand="INSERT INTO [Table] (username, email, password) VALUES (@newusername, @newemail, @newpassword)">
                 <InsertParameters>
                     <asp:ControlParameter ControlID="username" Name="newusername" PropertyName="Text" />
@@ -90,10 +94,13 @@
                     <asp:ControlParameter ControlID="password" Name="newpassword" PropertyName="Text" />
                 </InsertParameters>
             </asp:SqlDataSource>
-            Create a new account</h1>
+            
     
     </div>
-    <div>
+        
+    <div class="global1">
+        <h1>
+            Create a new account</h1>
         <p>
             Email:
             <asp:TextBox ID="email" runat="server"></asp:TextBox>
@@ -116,12 +123,15 @@
         <p>
             <a href ="Login.aspx">Login</a>
         </p>
-    </div>
-        
         <p>
             <asp:Label ID="Label1" runat="server"></asp:Label>
             </p>
         
+         
+    </div> 
+        <div> 
+        <uc1:buttom ID="buttom1" runat="server" /> 
+         </div>
     </form>
 </body>
 </html>

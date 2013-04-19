@@ -51,13 +51,19 @@
             background-color: #FFFF99;
             clip: rect(auto, auto, auto, auto);
         }
-       
+        .bodycr
+        {
+            width:950px;
+            margin-right: auto;
+            margin-left: auto;
+        }
         .bodycenter {
             font-size: medium;
             font-family: Arial, Helvetica, sans-serif;
             background-image: url('Image/food-pizza-tables.jpg');
             text-align: center;
             color: #FFFFFF;
+            float:left;
             font-weight: bold;
             margin-right: auto;
             margin-left: auto;
@@ -67,6 +73,7 @@
             font-size: medium;
             background-image: url('Image/pictures-delicious-food-dishes-46269.jpg');
             text-align: center;
+            float:right;
             color: #FFFFFF;
             font-weight: bold;
             margin-right: auto;
@@ -91,8 +98,10 @@
         <div class="heading2" style="width:950px"><a  href="Login.aspx">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Join Us</a> </div>
 <div>
     <div class="bodyleft" style="width:950px;height:593px;"><a href="BUWest.aspx">BU West</a></div>
+    <div class="bodycr" style="height: 267px;">
     <div class="bodycenter"style="height:267px; width:475px"><a href="BUCentral.aspx">BU Central</a></div>
     <div class="bodyright" style="float:right;height: 267px; width: 475px;"><a href="BUEast.aspx">BU East</a></div>
+    </div>
     </div>
         <uc1:buttom ID="buttom1" runat="server" />
     </form>
