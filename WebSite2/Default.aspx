@@ -37,8 +37,7 @@
         }
        
         .bodyleft {
-            margin: 3px auto 3px auto;
-            background-image: url('Image/second-series-of-chinese-food-culture-30842.jpg');
+            background-image: url('Image/Chinese-Cuisine-Table-Laying-1080x1920.jpg');
             font-family: Arial, Helvetica, sans-serif;
             color: #FFFFFF;
             font-size: medium;
@@ -53,9 +52,11 @@
         }
         .bodycr
         {
-            width:950px;
+            width: 950px;
             margin-right: auto;
             margin-left: auto;
+            margin-top: 4px;
+            height: 266px;
         }
         .bodycenter {
             font-size: medium;
@@ -73,7 +74,6 @@
             font-size: medium;
             background-image: url('Image/pictures-delicious-food-dishes-46269.jpg');
             text-align: center;
-            float:right;
             color: #FFFFFF;
             font-weight: bold;
             margin-right: auto;
@@ -82,6 +82,17 @@
        
         #form1 {
             height: 1281px;
+        }
+       
+        .bodyrightright {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+            background-image: url('Image/Food-Meat-900x1600.jpg');
+            color: #FFFFFF;
+            margin-right: auto;
+            margin-left: auto;
         }
        
         </style>
@@ -96,12 +107,14 @@
             </div>
         </div>
         <div class="heading2" style="width:950px"><a  href="Login.aspx">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Join Us</a> </div>
-<div>
-    <div class="bodyleft" style="width:950px;height:593px;"><a href="BUWest.aspx">BU West</a></div>
-    <div class="bodycr" style="height: 267px;">
-    <div class="bodycenter"style="height:267px; width:475px"><a href="BUCentral.aspx">BU Central</a></div>
-    <div class="bodyright" style="float:right;height: 267px; width: 475px;"><a href="BUEast.aspx">BU East</a></div>
-    </div>
+<div class="bodycr">
+    <div class="bodyleft" style="float:left;width:473px;height:266px;"><a href="BUWest.aspx">BU West</a></div>
+    <div class="bodycenter"style="float:right;height:266px; width:473px"><a href="BUCentral.aspx">BU Central</a></div>
+</div>
+    <div class="bodycr">
+    <div class="bodyright" style="float:left;height: 266px; width: 473px;"><a href="BUEast.aspx">BU East</a></div>
+    <div class="bodyrightright" style="float:right;height: 266px; width: 473px;"><a href="BUEast.aspx">Around BU</a></div>
+        
     </div>
         <uc1:buttom ID="buttom1" runat="server" />
     </form>
