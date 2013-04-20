@@ -29,13 +29,8 @@
             background-color: #FFFF99;
             clip: rect(auto, auto, auto, auto);
         }
-
-        #form1 {
-            height: 1281px;
-        }
-       
         </style>
-<div class="heading" style="width:950px;height:118px">
+        <div class="heading" style="width:950px;height:118px">
             <div>
                 <img src="Image/yummy_logo.jpg" style="height: 118px; width: 188px" />
             </div>
