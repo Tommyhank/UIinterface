@@ -98,9 +98,8 @@
         </style>
 
 </head>
-<body class="bodystyle"  style="margin:auto; height: 1282px;">
+<body class="bodystyle"  style="margin:auto; height: 772px;">
     <form id="form1" runat="server">
- 
         <div class="heading" style="width:950px;height:118px">
             <div>
                 <img src="Image/yummy_logo.jpg" style="height: 118px; width: 188px" />
@@ -108,12 +107,12 @@
         </div>
         <div class="heading2" style="width:950px"><a  href="Login.aspx">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Join Us</a> </div>
 <div class="bodycr">
-    <div class="bodyleft" style="float:left;width:473px;height:266px;"><a href="BUWest.aspx">BU West</a></div>
-    <div class="bodycenter"style="float:right;height:266px; width:473px"><a href="BUCentral.aspx">BU Central</a></div>
+    <div class="bodyleft" style="float:left;width:473px;height:266px;"><a href="BUWest.aspx" style="color:#f00">BU West</a></div>
+    <div class="bodycenter"style="float:right;height:266px; width:473px"><a href="BUCentral.aspx" style="color:#fff">BU Central</a></div>
 </div>
     <div class="bodycr">
-    <div class="bodyright" style="float:left;height: 266px; width: 473px;"><a href="BUEast.aspx">BU East</a></div>
-    <div class="bodyrightright" style="float:right;height: 266px; width: 473px;"><a href="BUEast.aspx">Around BU</a></div>
+    <div class="bodyright" style="float:left;height: 266px; width: 473px;"><a href="BUEast.aspx" style="color:#FFFFFF">BU East</a></div>
+    <div class="bodyrightright" style="float:right;height: 266px; width: 473px;"><a href="AroundBU.aspx" style="color:#ff0000">Around BU</a></div>
         
     </div>
         <uc1:buttom ID="buttom1" runat="server" />

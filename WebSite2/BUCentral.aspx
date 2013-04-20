@@ -11,19 +11,18 @@
         .BUcentral {
             margin: 3px auto 3px auto;
         }
+        .Tablestyle {
+            width: 950px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 4px;
+        }
     </style>
 </head>
-<body class="bodystyle">
+<body class="bodystyle" style="height: 657px">
     <form id="form1" runat="server">
         <uc1:head ID="head1" runat="server" />
-    <div>
-
-    
-        <asp:Table ID="Table1" class="BUcentral" runat="server" Width="950px">
-        </asp:Table>
-
-    
-    </div>
+    <div></div>
     </form>
 </body>
 </html>
