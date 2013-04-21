@@ -2,7 +2,6 @@
 
 <%@ Register src="Usercontrol/buttom.ascx" tagname="buttom" tagprefix="uc1" %>
 <%@ Register src="Usercontrol/head.ascx" tagname="head" tagprefix="uc2" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,36 +15,30 @@
 
     </style>
     <script runat="server">
-       
-
+              
       
 
     </script>
 </head>
-<body>
+<body style="height: 1008px">
     <form id="form1" runat="server">
     <div>
         <uc2:head ID="head1" runat="server" />
         
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]" InsertCommand="INSERT INTO tb_Userinfo(ID, Call, gender, email, phone) VALUES (@newID, @newCall, @newgender, @newemail, @newphone)">
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]" InsertCommand="INSERT INTO tb_Userinfo(Call, gender, email, phone, Username, Pwd, SecurityQuestion, Answer, area) VALUES (@newCall, @newgender, @newemail, @newphone, @newusername, @newpassword, @newSQ, @newanswer, @newarea)">
                 <InsertParameters>
-                    <asp:Parameter DefaultValue="ID" Name="newID" />
                     <asp:ControlParameter ControlID="Call" Name="newCall" PropertyName="Text" />
-                    <asp:ControlParameter ControlID="Gender" Name="newgender" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="Gender" Name="newgender" PropertyName="SelectedValue" />
                     <asp:ControlParameter ControlID="email" DefaultValue="" Name="newemail" PropertyName="Text" />
                     <asp:ControlParameter ControlID="Phone" Name="newphone" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="username" DefaultValue="" Name="newusername" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="password" Name="newpassword" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="ListBox1" Name="newSQ" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="Answer" DefaultValue="" Name="newanswer" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="Area" Name="newarea" PropertyName="Text" />
                 </InsertParameters>
-            </asp:SqlDataSource>
-            
+            </asp:SqlDataSource>  
     
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userlogin]" InsertCommand="INSERT INTO tb_Userlogin(Username, Pwd, Answer, SecurityQuestion) VALUES (@newusername, @newPwd, @newAnswer, @newSecurityQ)">
-            <InsertParameters>
-                <asp:ControlParameter ControlID="username" Name="newusername" PropertyName="Text" />
-                <asp:ControlParameter ControlID="password" Name="newPwd" PropertyName="Text" />
-                <asp:ControlParameter ControlID="Answer" Name="newAnswer" PropertyName="Text" />
-                <asp:ControlParameter ControlID="ListBox1" Name="newSecurityQ" PropertyName="SelectedValue" />
-            </InsertParameters>
-        </asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_SecurityQuestion]"></asp:SqlDataSource>
             
     
@@ -74,21 +67,28 @@
             Answer:
             <asp:TextBox ID="Answer" runat="server"></asp:TextBox>
         </p>
-        <p>
            <h3> Personal Information:</h3>
+
         <p> Call:
             <asp:TextBox ID="Call" runat="server"></asp:TextBox>
         </p>
         <p>
             Gender:
-            <asp:TextBox ID="Gender" runat="server"></asp:TextBox>
+            <asp:ListBox ID="Gender" runat="server" Height="36px" Width="56px">
+                <asp:ListItem>Male</asp:ListItem>
+                <asp:ListItem>Female</asp:ListItem>
+            </asp:ListBox>
         </p>
         <p>
             Email: <asp:TextBox ID="email" runat="server"></asp:TextBox>
         </p>
         <p>
-            Phone:
+            Phone number:
             <asp:TextBox ID="Phone" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            Address Area:
+            <asp:TextBox ID="Area" runat="server"></asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
@@ -104,9 +104,10 @@
         
          
     </div> 
-        <div> 
-        <uc1:buttom ID="buttom1" runat="server" /> 
+        <div style="height: 706px"> 
          </div>
+        <uc1:buttom ID="buttom1" runat="server" />
+        
     </form>
 </body>
 </html>
