@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿<%@ WebHandler Language="C#" Class="ShowImage" %>
+
+using System;
+using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Web;
 
-/// <summary>
-/// Summary description for ShowImage
-/// </summary>
-public class ShowImage:IHttpHandler
-{
-	public ShowImage()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+public class ShowImage : IHttpHandler {
+    public bool IsReusable {
+        get {
+            return false;
+        }
+    }
 
     public void ProcessRequest(HttpContext context)
     {
@@ -42,7 +37,7 @@ public class ShowImage:IHttpHandler
 
     public Stream ShowAlbumImage(int picid)
     {
-        string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        string conn = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection connection = new SqlConnection(conn);
         string sql = "SELECT pic FROM tb_Pics WHERE Pic_ID = @ID";
         SqlCommand cmd = new SqlCommand(sql, connection);
@@ -61,14 +56,6 @@ public class ShowImage:IHttpHandler
         finally
         {
             connection.Close();
-        }
-    }
-
-    public bool IsReusable
-    {
-        get
-        {
-            return false;
         }
     }
 }
