@@ -12,7 +12,7 @@
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
         ProviderName="System.Data.SqlClient"
-        SelectCommand="SELECT [pic_id],picture_tag, [pic] FROM [Pics]"></asp:SqlDataSource>
+        SelectCommand="SELECT [pic_id],picture_tag, [pic] FROM [tb_Pics]"></asp:SqlDataSource>
         <asp:ListView ID="Pic_listView" GroupItemCount="4" runat ="server" DataKeyNames="pic_id" DataSourceID="sqlDataSource1">
             <LayoutTemplate>
                 <asp:PlaceHolder

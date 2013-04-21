@@ -23,7 +23,7 @@ namespace UIinterface.App_Code
             //
         }
 
-        public void FileUpload(FileUpload FileUpload1, Label Label1, ListView listview,TextBox txtTags)
+        public void FileUpload(FileUpload FileUpload1, Label Label1, ListView listview,TextBox txtTags,Image image)
         {
             string savePath = @"c:\temp\uploads\";
             SqlConnection connection = null;
@@ -67,8 +67,11 @@ namespace UIinterface.App_Code
                             int id = Convert.ToInt32(cmd.ExecuteScalar());
                             Label1.Text = String.Format("Picture ID is {0}", id);
 
-                            FileUpload1.SaveAs(webFilePath);                                // 使用 SaveAs 方法保存文件
+                            FileUpload1.SaveAs(webFilePath);
+                            // 使用 SaveAs 方法保存文件
                             AddShuiYinWord(webFilePath, webFilePath_sy);
+                            image.ImageUrl = webFilePath_sy;
+                            
                             //AddShuiYinPic(webFilePath, webFilePath_syp, webFilePath_sypf);
                             MakeThumbnail(webFilePath, webFilePath_s, 130, 130, "Cut", listview);     // 生成缩略图方法
                             Label1.Text = "File“" + fileName + "”Uploaded Successful“" + fileName_s + "”缩略图，文件类型为：" + FileUpload1.PostedFile.ContentType + "，size of file：" + FileUpload1.PostedFile.ContentLength + "B";

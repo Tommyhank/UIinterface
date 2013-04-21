@@ -18,6 +18,6 @@ public partial class WebSite2_ResInfo : System.Web.UI.Page
 
     protected void butAdd_Click(object sender, EventArgs e)
     {
-        MyMC.FileUpload(openFileDialog, UploadStatusLabel, Pic_listView, txtTags);
+        MyMC.FileUpload(openFileDialog, UploadStatusLabel, Pic_listView, txtTags,Image1);
     }
 }
