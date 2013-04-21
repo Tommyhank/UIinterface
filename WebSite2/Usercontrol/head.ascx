@@ -22,8 +22,6 @@
             margin-right: auto;
             margin-left: auto;
             font-weight: bolder;
-            font-style: oblique;
-            font-variant: inherit;
         }
         .bodystyle {
             background-color: #FFFF99;
@@ -35,4 +33,4 @@
                 <img src="Image/yummy_logo.jpg" style="height: 118px; width: 188px" />
             </div>
         </div>
-        <div class="heading2" style="width:950px"><a  href="Login.aspx">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx">Join Us</a> </div>
+        <div class="heading2" style="width:950px"><a  href="Login.aspx" style="color:#FFFFFF;text-decoration:none">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Register.aspx" style="color:#FFFFFF;text-decoration:none" >Join Us</a> </div>
