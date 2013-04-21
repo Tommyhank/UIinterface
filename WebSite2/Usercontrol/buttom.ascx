@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="buttom.ascx.cs" Inherits="WebUserControl" %>
- <div class="Buttom">
      <style type="text/css">
          .Buttom {
              font-family: Arial, Helvetica, sans-serif;

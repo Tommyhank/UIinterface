@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="head.ascx.cs" Inherits="WebUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="head.ascx.cs" Inherits="WebSite2_Usercontrol_head" %>
     <style type="text/css">
         .heading {
             background-color: #FF9933;

@@ -2,7 +2,9 @@
 
 
 <%@ Register src="Usercontrol/buttom.ascx" tagname="buttom" tagprefix="uc1" %>
-<%@ Register Src="~/Usercontrol/head.ascx" TagPrefix="uc1" TagName="head" %>
+<%@ Register Src="~/WebSite2/Usercontrol/head.ascx" TagPrefix="uc1" TagName="head" %>
+
+
 
 
 
@@ -74,9 +76,11 @@
         </style>
 
 </head>
+
 <body class="bodystyle"  style="margin:auto; height: 772px;">
+
     <form id="form1" runat="server">
-        <uc1:head runat="server" ID="head" />
+        <uc1:head runat="server" id="head" />
 <div class="bodycr">
     <div class="bodyleft" style="float:left;width:473px;height:266px;"><a href="BUWest.aspx" style="color:#f00;text-decoration:none">BU West</a></div>
     <div class="bodycenter"style="float:right;height:266px; width:473px"><a href="BUCentral.aspx" style="color:#fff;text-decoration:none">BU Central</a></div>
