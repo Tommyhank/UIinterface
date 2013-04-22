@@ -34,9 +34,7 @@
     background-color: #FF6600;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 4px;
     width: 950px;
-    top: auto;
 }
 .bodyleft {
     background-image: url('../Image/Chinese-Cuisine-Table-Laying-1080x1920.jpg');
@@ -58,6 +56,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 4px;
+    height: 546px;
 }
 .bodycenter {
     font-size: medium;
@@ -95,4 +94,10 @@
         {
             float: right;
             width: 66%;
+        }
+  .BUcentral {
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 3px;
+            width: 950px;
         }
