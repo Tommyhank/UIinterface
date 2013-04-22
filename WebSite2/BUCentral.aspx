@@ -1,24 +1,31 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/WebSite2/MasterPage.master" AutoEventWireup="true" CodeFile="BUCentral.aspx.cs" Inherits="WebSite2_BUCentral" %>
 
-<%@ Register src="Usercontrol/head.ascx" tagname="head" tagprefix="uc1" %>
+<%@ Register Src="Usercontrol/head.ascx" TagName="head" TagPrefix="uc1" %>
 
-<%@ Register src="Usercontrol/buttom.ascx" tagname="buttom" tagprefix="uc2" %>
+<%@ Register Src="Usercontrol/buttom.ascx" TagName="buttom" TagPrefix="uc2" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+    <form id="form1" runat="server">
         <div class="BUcentral">
-        <a><img src="Image/BU%20Central/DD.JPG" /></a>
-        <a href="Mcdonald.aspx"><img src="Image/BU%20Central/McDonald's.jpg" style="border-width: 0px" /></a>
-        <a><img src="Image/BU%20Central/Gyu-Kaku.jpg" /></a>
-        <a><img src="Image/BU%20Central/PaPa%20John.jpg" /></a>    
-        <a><img src="Image/BU%20Central/Panda.jpg" /></a>  
-        <a><img src="Image/BU%20Central/Popeye.jpg" /></a>
-        <a><img src="Image/BU%20Central/Qdoba.jpg" /></a>
-        <a><img src="Image/BU%20Central/Sichuan.jpg" /></a>
-        <a><img src="Image/BU%20Central/Longhorn.jpg" /></a>
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/WebSite2/Image/BU Central/DD.JPG" OnClick="ImageButton1_Click" Width="310px" />
+            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="Image/BU%20Central/McDonald's.jpg"  Width="310px" OnClick="ImageButton2_Click" />
+            &nbsp;<a><img src="Image/BU%20Central/Gyu-Kaku.jpg" /></a>
+            <a>
+                <img src="Image/BU%20Central/PaPa%20John.jpg" /></a>
+            <a>
+                <img src="Image/BU%20Central/Panda.jpg" /></a>
+            <a>
+                <img src="Image/BU%20Central/Popeye.jpg" /></a>
+            <a>
+                <img src="Image/BU%20Central/Qdoba.jpg" /></a>
+            <a>
+                <img src="Image/BU%20Central/Sichuan.jpg" /></a>
+            <a>
+                <img src="Image/BU%20Central/Longhorn.jpg" /></a>
         </div>
-    </asp:Content>
-       
+    </form>
+</asp:Content>
+

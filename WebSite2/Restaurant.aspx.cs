@@ -9,6 +9,8 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        LabelRname.Text = Session["Restaurantname"].ToString();
+        Session.Remove("Restaurantname");
+        Session.Remove("username");
     }
 }
