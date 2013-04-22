@@ -13,7 +13,6 @@ public partial class Login : System.Web.UI.Page
     }
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
     {
-        e.Authenticated = true;
         string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
         string selectString = "SELECT * FROM tb_Userinfo WHERE Username='" + Login1.UserName + "'";//select string for search currency name correspond with the input
         SqlDataSource dsrc = new SqlDataSource(conString, selectString);
@@ -35,5 +34,30 @@ public partial class Login : System.Web.UI.Page
         }
         else
             e.Authenticated = false;
+    }
+    protected void PasswordRecovery1_SendingMail(object sender, MailMessageEventArgs e)
+    {
+        
+    }
+    protected void SubmitButton_Click(object sender, EventArgs e)
+    {
+        string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
+        string selectString = "SELECT * FROM tb_Userinfo WHERE Username='" + PasswordRecovery1.UserName + "'";//select string for search currency name correspond with the input
+        SqlDataSource dsrc = new SqlDataSource(conString, selectString);
+        DataView DV = (DataView)dsrc.Select(DataSourceSelectArguments.Empty);
+        if (DV.Table.Rows.Count > 0)
+        {
+
+            Session["Username"] = PasswordRecovery1.UserName;
+            Server.Transfer("ForgetPassword.aspx");
+        }
+        else
+            PasswordRecovery1.UserNameFailureText = "Username not exists! ";
+        
+            
+    }
+    protected void LoginButton_Click(object sender, EventArgs e)
+    {
+        
     }
 }

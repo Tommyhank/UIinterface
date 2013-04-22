@@ -11,7 +11,7 @@
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
         <div class="BUcentral">
         <a><img src="Image/BU%20Central/DD.JPG" /></a>
-        <a><img src="Image/BU%20Central/McDonald's.jpg" /></a>
+        <a href="Mcdonald.aspx"><img src="Image/BU%20Central/McDonald's.jpg" style="border-width: 0px" /></a>
         <a><img src="Image/BU%20Central/Gyu-Kaku.jpg" /></a>
         <a><img src="Image/BU%20Central/PaPa%20John.jpg" /></a>    
         <a><img src="Image/BU%20Central/Panda.jpg" /></a>  

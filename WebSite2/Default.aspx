@@ -9,7 +9,7 @@
     <div class="bodyleft" style="float:left;width:473px;height:266px;"><a href="BUWest.aspx" style="color:#f00;text-decoration:none">BU West</a></div>
     <div class="bodycenter"style="float:right;height:266px; width:473px"><a href="BUCentral.aspx" style="color:#fff;text-decoration:none">BU Central</a></div>
     <div class="bodyright" style="float:left;height: 266px; width: 473px;"><a href="BUEast.aspx" style="color:#FFFFFF;text-decoration:none">BU East</a></div>
-    <div class="body</asp:Content>rightright" style="float:right;height: 266px; width: 473px;"><a href="AroundBU.aspx" style="color:#ff0000;text-decoration:none">Around BU</a></div>      
+    <div class="bodyrightright" style="float:right;height: 266px; width: 473px;"><a href="AroundBU.aspx" style="color:#ff0000;text-decoration:none">Around BU</a></div>      
 </div>
         
 </asp:Content>
