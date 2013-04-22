@@ -9,6 +9,16 @@ public partial class WebSite2_MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        try
+        {
+            Label1.Text = "Helle, Welcome " + Session["Username"].ToString();
+            Label1.Visible = true;
+            Label2.Visible = false;
+            Label3.Visible = false;
+        }
+        catch (Exception ex)
+        {
 
+        }
     }
 }

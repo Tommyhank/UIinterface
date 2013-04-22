@@ -10,9 +10,8 @@
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <form id="form1" runat="server">
         <div class="BUcentral">
-            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/WebSite2/Image/BU Central/DD.JPG" OnClick="ImageButton1_Click" Width="310px" />
-            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="Image/BU%20Central/McDonald's.jpg"  Width="310px" OnClick="ImageButton2_Click" />
-            &nbsp;<a><img src="Image/BU%20Central/Gyu-Kaku.jpg" /></a>
+            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="Image/BU%20Central/McDonald's.jpg" OnClick="ImageButton2_Click" />
+            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/WebSite2/Image/BU Central/Gyu-Kaku.jpg" />&nbsp;<asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/WebSite2/Image/BU Central/PaPa John.jpg" />
             <a>
                 <img src="Image/BU%20Central/PaPa%20John.jpg" /></a>
             <a>
