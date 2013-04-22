@@ -12,15 +12,9 @@ public partial class WebSite2_Register : System.Web.UI.Page
     {
 
     }
-      protected void Page_Load()
-        {
-            
-            
-        }
 
-        protected void Register_Click(object sender, EventArgs e)
-        {
-
+    protected void Register_Click(object sender, EventArgs e)
+    {
         if (String.IsNullOrEmpty(email.Text) ||
            String.IsNullOrEmpty(username.Text) ||
            String.IsNullOrEmpty(password.Text) ||
@@ -31,14 +25,14 @@ public partial class WebSite2_Register : System.Web.UI.Page
             string selectString = "SELECT * FROM tb_Userinfo WHERE Username='" + username.Text + "'";//select string for search currency name correspond with the input
             SqlDataSource dsrc = new SqlDataSource(conString, selectString);
             DataView DV = (DataView)dsrc.Select(DataSourceSelectArguments.Empty);
-            if(DV.Table.Rows.Count > 0)
+            if (DV.Table.Rows.Count > 0)
             {
-                Label1.Text = "This username has already existed! Please enter a new one";
+                Label1.Text = "This username has already existed! Please try a new one";
             }
 
             else if (!(Regex.IsMatch(email.Text, @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[a-zA-Z]{2,9})$"))) //using Regex class to check if the input is an email
             {
-                Label1.Text = "Please enter a correct email!";
+                Label1.Text = "Your email format is not right, Please check again!";
             }
             else if (!(Regex.IsMatch(Phone.Text, @"^[0-9]+")))
             {
@@ -46,55 +40,54 @@ public partial class WebSite2_Register : System.Web.UI.Page
             }
             else
             {
+                String a = DropDownListSQ.SelectedValue;
                 SqlDataSource1.Insert();
-               
+
                 //int ID = (int) DV.Table.Rows[0][0];
                 //Console.Write(ID);
-    
+
                 username.Text = String.Empty;
                 email.Text = String.Empty;
                 password.Text = String.Empty;
                 passwordConfirm.Text = String.Empty;
-                Label1.Text = "Register Succeed! Please login";
+                Label1.Text = "Hi, "+ Call.Text.Trim() +"! Register Succeed! Please login";
 
                 Response.Redirect("~/WebSite2/Login.aspx");
             }
-                
-
         }
         else
-            Label1.Text = "Error, the password is not confirmed!";
-        }
+            Label1.Text = "Error, the password is not same!";
+    }
 
-        
 
-        [Serializable]
-        public class Customer
+
+    [Serializable]
+    public class Customer
+    {
+        private string email;
+        private string username;
+        private string password;
+
+        public string Email
         {
-            private string email;
-            private string username;
-            private string password;
-
-            public string Email
-            {
-                get { return email; }
-            }
-
-            public string Username
-            {
-                get { return username; }
-            }
-            public string Password
-            {
-                get { return password; }
-            }
-            public Customer( string CustomerEmail, string CustomerUsername, string Password)
-            {
-                
-                email = CustomerEmail;
-                username = CustomerUsername;
-                password = Password;
-            }
+            get { return email; }
         }
-    
+
+        public string Username
+        {
+            get { return username; }
+        }
+        public string Password
+        {
+            get { return password; }
+        }
+        public Customer(string CustomerEmail, string CustomerUsername, string Password)
+        {
+
+            email = CustomerEmail;
+            username = CustomerUsername;
+            password = Password;
+        }
+    }
+
 }
