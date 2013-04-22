@@ -41,6 +41,14 @@ public partial class Login : System.Web.UI.Page
     }
     protected void SubmitButton_Click(object sender, EventArgs e)
     {
+        
+    }
+    protected void LoginButton_Click(object sender, EventArgs e)
+    {
+        
+    }
+    protected void SubmitButton_Click1(object sender, EventArgs e)
+    {
         string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
         string selectString = "SELECT * FROM tb_Userinfo WHERE Username='" + PasswordRecovery1.UserName + "'";//select string for search currency name correspond with the input
         SqlDataSource dsrc = new SqlDataSource(conString, selectString);
@@ -55,9 +63,5 @@ public partial class Login : System.Web.UI.Page
             PasswordRecovery1.UserNameFailureText = "Username not exists! ";
         
             
-    }
-    protected void LoginButton_Click(object sender, EventArgs e)
-    {
-        
     }
 }

@@ -112,7 +112,7 @@
                                 </tr>
                                 <tr>
                                     <td align="right" colspan="2">
-                                        <asp:Button ID="SubmitButton" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" CommandName="Submit" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" Text="Submit" ValidationGroup="PasswordRecovery1" />
+                                        <asp:Button ID="SubmitButton" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" CommandName="Submit" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" Text="Submit" ValidationGroup="PasswordRecovery1" OnClick="SubmitButton_Click1" />
                                     </td>
                                 </tr>
                             </table>
