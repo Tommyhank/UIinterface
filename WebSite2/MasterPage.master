@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="WebSite2_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="CSS%20style/stylesheet.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bodystyle">
+<div class="heading">
+</div>
+<div class="heading2">
+    <div style="float:left"><a href="Default.aspx" style="color:#FFFFFF;text-decoration:none">Home</a></div>                                          
+    <asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Login</a></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Sign in</a></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <asp:Label ID="Label3" runat="server"><a href="Register.aspx" style="color: #FFFFFF; text-decoration: none">Join Us</a></asp:Label>
+</div>
+<div class="page">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</div>
+<div class="Buttom">
+    <h2>Follow us</h2>
+    <p><a href="http://www.facebook.com/">Facebook</a></p>
+        <p><a href="http://www.twitter.com/">Twitter</a></p></div>
+</body>
+</html>

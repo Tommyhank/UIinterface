@@ -1,0 +1,98 @@
+﻿.bodystyle {
+    background-color: #FFFF99;
+    clip: rect(auto, auto, auto, auto);
+}
+  .heading
+    {
+    font-family: "Arial Unicode MS";
+    font-size: medium;
+    color: #808080;
+    font-weight: bold;
+    font-style: normal;
+    background-image: url('../Image/13195053W15I0-135O.jpg');
+    margin-right: auto;
+    margin-left: auto;
+    width: 950px;
+    height: 191px;
+}
+.heading2
+    {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: medium;
+    background-color: #FF6600;
+    text-align: right;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bolder;
+    width: 950px;
+}
+.Buttom {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #FF6600;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4px;
+    width: 950px;
+    top: auto;
+}
+.bodyleft {
+    background-image: url('../Image/Chinese-Cuisine-Table-Laying-1080x1920.jpg');
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: medium;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+       
+        .bodystyle {
+            background-color: #FFFF99;
+            clip: rect(auto, auto, auto, auto);
+        }
+        .bodycr
+        {
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4px;
+}
+.bodycenter {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../Image/food-pizza-tables.jpg');
+    text-align: center;
+    color: #FFFFFF;
+    float: right;
+    font-weight: bold;
+}
+.bodyright {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-image: url('../Image/pictures-delicious-food-dishes-46269.jpg');
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 4px;
+}
+.bodyrightright {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('../Image/Food-Meat-900x1600.jpg');
+    color: #FFFFFF;
+    margin-top: 4px;
+}
+ .page {
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .global1
+        {
+            float: right;
+            width: 66%;
+        }

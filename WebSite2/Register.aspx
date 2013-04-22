@@ -1,29 +1,28 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="WebSite2_Register" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/WebSite2/MasterPage.master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="WebSite2_Register" %>
 
 <%@ Register Src="Usercontrol/buttom.ascx" TagName="buttom" TagPrefix="uc1" %>
 <%@ Register Src="Usercontrol/head.ascx" TagName="head" TagPrefix="uc2" %>
-<!DOCTYPE html>
+<%@ Register Src="~/WebSite2/Usercontrol/head.ascx" TagPrefix="uc1" TagName="head" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Register</title>
-    <style type="text/css">
-        .global1
-        {
-            float: right;
-            width: 66%;
-        }
-    </style>
-    <script runat="server">
+
+
+<script runat="server">
               
       
 
     </script>
-</head>
-<body style="height: 1008px">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    
+    <style type="text/css">
+        #form1 {
+            height: 918px;
+        }
+    </style>
+    
+</asp:Content>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <form id="form1" runat="server">
         <div>
-            <uc2:head ID="head1" runat="server" />
 
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]" InsertCommand="INSERT INTO tb_Userinfo(Call, gender, email, phone, Username, Pwd, SecurityQuestion, Answer, area) VALUES (@newCall, @newgender, @newemail, @newphone, @newusername, @newpassword, @newSQ, @newanswer, @newarea)">
                 <InsertParameters>
@@ -110,10 +109,8 @@
                 <asp:Label ID="Label1" runat="server"></asp:Label>
             </p>
         </div>
-        <div style="height: 799px">
+        <div style="height: 95px">
         </div>
-        <uc1:buttom ID="buttom1" runat="server" />
 
     </form>
-</body>
-</html>
+    </asp:Content>
