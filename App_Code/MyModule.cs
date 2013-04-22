@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -56,25 +57,27 @@ namespace UIinterface.App_Code
                     {
                         try
                         {
-
-                            string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-                            connection = new SqlConnection(conn);
-                            connection.Open();
-                            string sql = "Insert into tb_Pics(picture_tag,pic) Values(@tag,@pic) Select @@Identity";
-                            SqlCommand cmd = new SqlCommand(sql, connection);
-                            cmd.Parameters.AddWithValue("@tag", txtTags.Text);
-                            cmd.Parameters.AddWithValue("@pic", imgByte);
-                            int id = Convert.ToInt32(cmd.ExecuteScalar());
-                            Label1.Text = String.Format("Picture ID is {0}", id);
-
                             FileUpload1.SaveAs(webFilePath);
                             // 使用 SaveAs 方法保存文件
                             AddShuiYinWord(webFilePath, webFilePath_sy);
                             image.ImageUrl = webFilePath_sy;
                             
                             //AddShuiYinPic(webFilePath, webFilePath_syp, webFilePath_sypf);
-                            MakeThumbnail(webFilePath, webFilePath_s, 130, 130, "Cut", listview);     // 生成缩略图方法
+                            byte[] imgByte_small = MakeThumbnail(webFilePath, webFilePath_s, 130, 130, "Cut", listview);     // 生成缩略图方法
                             Label1.Text = "File“" + fileName + "”Uploaded Successful“" + fileName_s + "”缩略图，文件类型为：" + FileUpload1.PostedFile.ContentType + "，size of file：" + FileUpload1.PostedFile.ContentLength + "B";
+
+                            string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                            connection = new SqlConnection(conn);
+                            connection.Open();
+                            string sql = "Insert into tb_Pics(picture_tag,pic,pic_small) Values(@tag,@pic,@pic_small) Select @@Identity";
+                            SqlCommand cmd = new SqlCommand(sql, connection);
+                            cmd.Parameters.AddWithValue("@tag", txtTags.Text);
+                            cmd.Parameters.AddWithValue("@pic", imgByte);
+                            cmd.Parameters.AddWithValue("@pic_small", imgByte_small);
+                            int id = Convert.ToInt32(cmd.ExecuteScalar());
+                            Label1.Text = String.Format("Picture ID is {0}", id);
+
+                            
                         }
                         catch (Exception ex)
                         {
@@ -105,7 +108,7 @@ namespace UIinterface.App_Code
         /// <param name="width">缩略图宽度</param>
         /// <param name="height">缩略图高度</param>
         /// <param name="mode">生成缩略图的方式</param>   
-        public static void MakeThumbnail(string originalImagePath, string thumbnailPath, int width, int height, string mode,ListView listview)
+        public static Byte[] MakeThumbnail(string originalImagePath, string thumbnailPath, int width, int height, string mode,ListView listview)
         {
             System.Drawing.Image originalImage = System.Drawing.Image.FromFile(originalImagePath);
 
@@ -171,6 +174,8 @@ namespace UIinterface.App_Code
             {
                 //以jpg格式保存缩略图
                 bitmap.Save(thumbnailPath, System.Drawing.Imaging.ImageFormat.Jpeg);
+                Byte[] imgByte = ConvertImage(bitmap);
+                return imgByte;
                 //listview.Items.Add();//System.Drawing.Image.FromFile(thumbnailPath));
             }
             catch (System.Exception e)
@@ -183,6 +188,24 @@ namespace UIinterface.App_Code
                 bitmap.Dispose();
                 g.Dispose();
             }
+        }
+
+        private static byte[] ConvertImage(System.Drawing.Image image)
+        {
+            MemoryStream ms = new MemoryStream();
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(ms, (object)image);
+            ms.Close();
+            return ms.ToArray();
+        }
+
+        private static System.Drawing.Image ReadImage(byte[] bytes)
+        {
+            MemoryStream ms = new MemoryStream(bytes, 0, bytes.Length);
+            BinaryFormatter bf = new BinaryFormatter();
+            object obj = bf.Deserialize(ms);
+            ms.Close();
+            return (System.Drawing.Image)obj;
         }
 
         /**/
