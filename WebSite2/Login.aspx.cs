@@ -24,11 +24,11 @@ public partial class Login : System.Web.UI.Page
             if (password.Equals(Login1.Password))
             {
                 //Label1.Text = "Congratulations! Login succeed! Please wait for redirect to Homepage!";
-
-                
+                Session["Username"] = Login1.UserName;
+                Server.Transfer("~/WebSite2/Default.aspx");
                 //Response.Write("<script language=javascript>alert('Congratulations! Login succeed!')</script>");
                 //System.Threading.Thread.Sleep(5000);
-                Response.Redirect("~/WebSite2/Default.aspx");
+                //Response.Redirect("~/WebSite2/Default.aspx");
             }
             else
                 e.Authenticated = false;
