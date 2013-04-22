@@ -12,9 +12,13 @@
     <div>
     
     </div>
-        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" BackColor="#F7F7DE" BorderColor="#CCCC99" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt">
-            <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="#FFFFFF" />
+        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" BorderPadding="4" ForeColor="#333333" Height="192px" TextLayout="TextOnTop" Width="308px">
+            <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+            <LoginButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+            <TextBoxStyle Font-Size="0.8em" />
+            <TitleTextStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFFF" Font-Size="0.9em" />
         </asp:Login>
+        <asp:Label ID="Label1" runat="server"></asp:Label>
     </form>
 </body>
 </html>
