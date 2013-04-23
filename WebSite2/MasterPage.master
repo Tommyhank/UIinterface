@@ -14,7 +14,8 @@
 </div>
 <div class="heading2">
     <div style="float:left"><a href="Default.aspx" style="color:#FFFFFF;text-decoration:none">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="About.aspx" style="color:#FFFFFF;text-decoration:none">Profile</a>
+        
+        <asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label>
     </div>                                          
     <asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Login</a></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

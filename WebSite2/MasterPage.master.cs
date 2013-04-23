@@ -15,6 +15,7 @@ public partial class WebSite2_MasterPage : System.Web.UI.MasterPage
             Label1.Visible = true;
             Label2.Visible = false;
             Label3.Visible = false;
+            L1.Visible = true;
         }
         catch (Exception ex)
         {
