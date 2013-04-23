@@ -14,13 +14,13 @@ public partial class WebSite2_BUCentral : System.Web.UI.Page
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
         Session["Restaurantname"] = "DD";
-        Session["Username"] = ""; 
+        //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }
     protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
     {
         Session["Restaurantname"] = "Mc";
-        Session["Username"] = ""; 
+        //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }
 }
