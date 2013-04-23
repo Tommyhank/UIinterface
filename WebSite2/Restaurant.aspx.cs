@@ -18,6 +18,16 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
             LabelRname.Text = RestaurantName;
             Session.Remove("Restaurantname");
             Image1.ImageUrl = "~/WebSite2/Image/BU Central/" + RestaurantName + ".jpg";
+            string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
+            string selectString = "SELECT * FROM tb_Restaurant WHERE Name='" + RestaurantName +"'";//select string for search currency name correspond with the input
+            SqlDataSource dsrc = new SqlDataSource(conString, selectString);
+            DataView DV = (DataView)dsrc.Select(DataSourceSelectArguments.Empty);
+            LabelAddress.Text = DV.Table.Rows[0][2].ToString();
+            LabelContact.Text = DV.Table.Rows[0][3].ToString();
+            LabelCuisine.Text = DV.Table.Rows[0][4].ToString();
+            LabelRate.Text = DV.Table.Rows[0][5].ToString();
+            LabelDescription.Text = DV.Table.Rows[0][7].ToString();
+
         }
         catch (Exception ex)
         {

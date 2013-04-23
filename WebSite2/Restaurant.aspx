@@ -20,8 +20,11 @@
         </div>
     <div class="restaurantintro">
         <asp:Label ID="LabelRname" runat="server" Text="RestaurantName" CssClass="intro"></asp:Label><br />
-        <asp:Label ID="Label1" runat="server" Text="RestaurantName" CssClass="intro"></asp:Label><br />
-        <asp:Label ID="LabelDescription" runat="server" CssClass="intro"></asp:Label>
+        <asp:Label ID="LabelContact" runat="server" Text="RestaurantContact" CssClass="intro"></asp:Label><br />
+        <asp:Label ID="LabelAddress" runat="server" Text="RestaurantAddress" CssClass="intro"></asp:Label><br />
+        <asp:Label ID="LabelCuisine" runat="server" Text="RestaurantCuisine" CssClass="intro"></asp:Label><br />
+        <asp:Label ID="LabelRate" runat="server" Text="RestaurantRate" CssClass="intro"></asp:Label><br />
+        <asp:Label ID="LabelDescription" runat="server" Text="RestaurantDescription" CssClass="intro"></asp:Label>
         </div>
     <div class="dishes">
         <asp:ListView ID="ListView1" runat="server">
