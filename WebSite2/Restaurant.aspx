@@ -20,6 +20,7 @@
         </div>
     <div class="restaurantintro">
         <asp:Label ID="LabelRname" runat="server" Text="RestaurantName" CssClass="intro"></asp:Label><br />
+        <asp:Label ID="Label1" runat="server" Text="RestaurantName" CssClass="intro"></asp:Label><br />
         <asp:Label ID="LabelDescription" runat="server" CssClass="intro"></asp:Label>
         </div>
     <div class="dishes">
