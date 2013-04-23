@@ -13,7 +13,7 @@ public partial class WebSite2_BUCentral : System.Web.UI.Page
     }
     protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
     {
-        Session["Restaurantname"] = "Mc";
+        Session["Restaurantname"] = "McDonald's";
         //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }
@@ -25,7 +25,7 @@ public partial class WebSite2_BUCentral : System.Web.UI.Page
     }
     protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
     {
-        Session["Restaurantname"] = "Gyu-KaKu";
+        Session["Restaurantname"] = "Gyu-Kaku";
         //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }

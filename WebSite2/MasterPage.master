@@ -23,6 +23,7 @@
             <asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Sign in</a></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <asp:Label ID="Label3" runat="server"><a href="Register.aspx" style="color: #FFFFFF; text-decoration: none">Join Us</a></asp:Label>
+        <asp:Label ID="L2"  runat="server" Visible="False"><a href ="Logout.aspx" style="color: #FFFFFF; text-decoration: none">Log out</a></asp:Label>
     </div>
     <div class="page">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
