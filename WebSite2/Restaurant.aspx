@@ -4,9 +4,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
-        <p>
-            <asp:Label ID="LabelRname" runat="server" Text="Label"></asp:Label>
-        </p>
+    <div class="restname">
+        <asp:Image ID="Image1" runat="server" Height="233px" Width="310px" />
+        </div>
+    <div class="restaurantintro">
+        <asp:Label ID="Label4" runat="server" Text="Label" CssClass="intro"></asp:Label>
+        </div>
+    <div class="dishes">
+        <asp:ListView ID="ListView1" runat="server">
+        </asp:ListView>
+        </div>
+        <div>
+            <asp:TextBox ID="TextBox1" runat="server" Height="95px" Width="527px"></asp:TextBox>
+            <br />
+            <asp:Button ID="Button1" runat="server" CssClass="heading2" Height="32px" Text="Comment" Width="123px" />
+        </div>
     </form>
-</asp:Content>
+    </asp:Content>
 

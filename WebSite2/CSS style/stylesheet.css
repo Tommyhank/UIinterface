@@ -101,3 +101,23 @@
             margin-top: 3px;
             width: 950px;
         }
+.restaurantintro {
+    float: right;
+    width: 610px;
+    height: 233px;
+}
+.dishes {
+    float: right;
+    width: 950px;
+}
+.restname {
+    float: left;
+    width: 310px;
+    height: 233px;
+}
+.intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #000000;
+}
