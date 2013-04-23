@@ -11,7 +11,7 @@ public partial class WebSite2_MasterPage : System.Web.UI.MasterPage
     {
         try
         {
-            Label1.Text = "Hello, Welcome " + Session["Username"].ToString();
+            Label1.Text = "Hello, Welcome back: " + Session["Username"].ToString()+"!";
             Label1.Visible = true;
             Label2.Visible = false;
             Label3.Visible = false;

@@ -15,7 +15,7 @@
         <asp:Image ID="Image1" runat="server" Height="233px" Width="310px" />
         </div>
     <div class="restaurantintro">
-        <asp:Label ID="Label4" runat="server" Text="Label" CssClass="intro"></asp:Label>
+        <asp:Label ID="LabelRname" runat="server" Text="Label" CssClass="intro"></asp:Label>
         </div>
     <div class="dishes">
         <asp:ListView ID="ListView1" runat="server">

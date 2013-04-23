@@ -11,15 +11,21 @@ public partial class WebSite2_BUCentral : System.Web.UI.Page
     {
 
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    {
+        Session["Restaurantname"] = "Mc";
+        //Session["Username"] = ""; 
+        Server.Transfer("Restaurant.aspx");
+    }
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
     {
         Session["Restaurantname"] = "DD";
         //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }
-    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
     {
-        Session["Restaurantname"] = "Mc";
+        Session["Restaurantname"] = "Gyu-KaKu";
         //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }

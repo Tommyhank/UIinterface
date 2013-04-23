@@ -13,7 +13,7 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
     {
         try
         {
-            //LabelRname.Text = Session["Restaurantname"].ToString();
+            LabelRname.Text = Session["Restaurantname"].ToString();
             RestaurantName = Session["Restaurantname"].ToString();
             UserName = Session["Username"].ToString();
             //Session.Remove("Restaurantname");
