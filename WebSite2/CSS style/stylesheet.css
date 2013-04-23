@@ -63,29 +63,32 @@
 .bodycenter {
     font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../Image/food-pizza-tables.jpg');
+    background-image: url('../Image/BUcentral.gif');
     text-align: center;
     color: #FFFFFF;
     float: right;
     font-weight: bold;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Image/BUcentral.gif', sizingMethod='scale');
 }
 .bodyright {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    background-image: url('../Image/pictures-delicious-food-dishes-46269.jpg');
+    background-image: url('../Image/BUeast.gif');
     text-align: center;
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 4px;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Image/BUeast.gif', sizingMethod='scale');
 }
 .bodyrightright {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     font-weight: bold;
     text-align: center;
-    background-image: url('../Image/Food-Meat-900x1600.jpg');
+    background-image: url('../Image/AroundBU.gif');
     color: #FFFFFF;
     margin-top: 4px;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Image/AroundBU.gif', sizingMethod='scale');
 }
  .page {
     width: 950px;
