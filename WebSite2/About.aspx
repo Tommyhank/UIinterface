@@ -4,15 +4,15 @@
     <style type="text/css">
         #form1
         {
-            height: 220px;
+            height: 398px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]"></asp:SqlDataSource>
-            <div class ="global1">
-                <h3>Personal Information:</h3>
+            <div class ="bodyword">
+                <p>Personal Information</p>
                 Call:
             <asp:Label ID="Call" runat="server"></asp:Label>
                 <br />

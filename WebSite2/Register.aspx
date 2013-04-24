@@ -1,9 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/WebSite2/MasterPage.master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="WebSite2_Register" %>
 
-<%@ Register Src="Usercontrol/buttom.ascx" TagName="buttom" TagPrefix="uc1" %>
-<%@ Register Src="Usercontrol/head.ascx" TagName="head" TagPrefix="uc2" %>
-<%@ Register Src="~/WebSite2/Usercontrol/head.ascx" TagPrefix="uc1" TagName="head" %>
-
 
 
 <script runat="server">
@@ -15,7 +11,7 @@
     
     <style type="text/css">
         #form1 {
-            height: 918px;
+            height: 1078px;
         }
     </style>
     
@@ -43,8 +39,8 @@
 
         </div>
 
-        <div class="global1">
-            <h1>Create a new account</h1>
+        <div class="bodyword">
+            Create a new account
             <p>
                 Username:
             <asp:TextBox ID="username" runat="server"></asp:TextBox>
@@ -66,7 +62,7 @@
                 Answer:
             <asp:TextBox ID="Answer" runat="server" Width="279px"></asp:TextBox>
             </p>
-            <h3>Personal Information:</h3>
+            Personal Information:
 
             <p>
                 Call:
@@ -74,7 +70,7 @@
             </p>
             <p>
                 Gender:
-                <asp:RadioButtonList ID="RadioGenderList" runat="server" Width="81px">
+                <asp:RadioButtonList ID="RadioGenderList" runat="server" Width="175px">
                     <asp:ListItem>Male</asp:ListItem>
                     <asp:ListItem>Female</asp:ListItem>
                 </asp:RadioButtonList>
@@ -94,13 +90,9 @@
                     <asp:ListItem>BuEast</asp:ListItem>
                     <asp:ListItem>BuOther</asp:ListItem>
                 </asp:RadioButtonList>
-                &nbsp;
             </p>
             <p>
-                &nbsp;
-            </p>
-            <p>
-                <asp:Button ID="Register" runat="server" Text="Register" OnClick="Register_Click" />
+                <asp:Button ID="Register" runat="server" Text="Register" OnClick="Register_Click" Height="53px" Width="137px" />
             </p>
             <p>
                 <a href="Login.aspx">Login</a>
@@ -108,8 +100,6 @@
             <p>
                 <asp:Label ID="Label1" runat="server"></asp:Label>
             </p>
-        </div>
-        <div style="height: 95px">
         </div>
 
     </form>

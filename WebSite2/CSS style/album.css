@@ -28,7 +28,7 @@ last edit Jul 11 2006
 #album{
 	width: 500px;
 	background: #EEEEEE;
-	margin: .5em auto;
+	margin: 0.4em auto .5em auto;
 	font-size: 100%;
 	padding-bottom: 10px;
 	text-align: left;

@@ -19,7 +19,7 @@ public partial class WebSite2_BUCentral : System.Web.UI.Page
     }
     protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
     {
-        Session["Restaurantname"] = "DD";
+        Session["Restaurantname"] = "Dunkin Donuts";
         //Session["Username"] = ""; 
         Server.Transfer("Restaurant.aspx");
     }

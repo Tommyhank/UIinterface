@@ -4,7 +4,10 @@
     <style type="text/css">
         #form1
         {
-            height: 1000px;
+            height: 1998px;
+            font-family: "bradley Hand ITC";
+            font-size: xx-large;
+            font-weight: bolder;
         }
 
         #placeholder
@@ -472,6 +475,9 @@
         </asp:SqlDataSource>
         <div class="restname">
             <asp:Image ID="Image1" runat="server" Height="233px" Width="310px" />
+            <br />
+            <br />
+            <br />
         </div>
         <div class="restaurantintro">
             <asp:Label ID="Label4" runat="server" Text="Restaurant: " CssClass="intro"></asp:Label>
@@ -490,25 +496,27 @@
         <div class="dishes">
             <br />
             <h1 style="font-size: 1.5em; text-align: center; padding: 1em; height: 20px;">Album</h1>
-            <div id="album" class="">
+            <div id="album" >
                 <link href="CSS%20style/album.css" rel="stylesheet" />
                 <div id="pic" style="margin-left: auto; margin-right: auto;">
                     <a href="Image/BU Central/McDonalds.jpg" rel="lightbox" id="ShowLightBox">
-                        <img src="Image/BU Central/McDonalds.jpg" alt="点击查看完全尺寸" id="placeholder" /></a>
+                        <img src="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" alt="点击查看完全尺寸" id="placeholder" /></a>
                 </div>
                 <p id="desc">Mc</p>
                 <div id="thumbs">
                     <ul>
-                        <li><a onclick="return showPic(this);" href="Image/Mc/1354186130352.jpg" title="少年派">
-                            <img src="Image/Mc/s_1354186130352.jpg" alt="Mc" /></a></li>
-                        <li><a onclick="return showPic(this);" href="Image/Mc/1354186437137.jpg" title="Lovely Baby">
-                            <img src="Image/Mc/s_1354186437137.jpg" alt="Mc" /></a></li>
-                        <li><a onclick="return showPic(this);" href="Image/Mc/135418648677.jpg" title="优秀历史建筑红十会医院">
-                            <img src="Image/Mc/s_135418648677.jpg" alt="Mc" /></a></li>
-                        <li><a onclick="return showPic(this);" href="Image/Mc/6.75_Loadscreen.jpg" title="百代公司旧址">
-                            <img src="Image/Mc/s_6.75_Loadscreen.jpg" alt="百代公司旧址" /></a></li>
-                        <li><a onclick="return showPic(this);" href="Image/BU Central/McDonalds.jpg" title="人骨教堂内部装饰">
-                            <img src="Image/Mc/s_McDonald's.jpg" alt="人骨教堂内部装饰" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" title="Deluxe-Snack-Wrap">
+                            <img src="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrapsssssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Big-Mac.png" title="Lovely Baby">
+                            <img src="Image/restaurant/Mc/mcdonalds-Big-Macsssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Fish-McBites-Regular-Size.png" title="Fish-McBites">
+                            <img src="Image/restaurant/Mc/mcdonalds-Fish-McBites-Regular-Sizessssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Premium-Bacon-Ranch-Salad-with-Crispy-Chicken.png" title="Bacon-Ranch-Salad">
+                            <img src="Image/restaurant/Mc/mcdonalds-Premium-Bacon-Ranch-Salad-with-Crispy-Chickensssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Premium-Roast-Iced-Coffee-Small.png" title="Roast-Iced-Coffee">
+                            <img src="Image/restaurant/Mc/mcdonalds-Premium-Roast-Iced-Coffee-Smallssssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Small-French-Fries.png" title="French-Fries">
+                            <img src="Image/restaurant/Mc/mcdonalds-Small-French-Friessssssssssssss.png" alt="Mc" /></a></li>
                     </ul>
                 </div>
             </div>

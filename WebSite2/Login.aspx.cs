@@ -56,7 +56,7 @@ public partial class Login : System.Web.UI.Page
         if (DV.Table.Rows.Count > 0)
         {
 
-            Session["Username"] = PasswordRecovery1.UserName;
+            Session["UserName"] = PasswordRecovery1.UserName;
             Server.Transfer("ForgetPassword.aspx");
         }
         else

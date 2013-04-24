@@ -1,8 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/WebSite2/MasterPage.master" AutoEventWireup="true" CodeFile="BUCentral.aspx.cs" Inherits="WebSite2_BUCentral" %>
 
-<%@ Register Src="Usercontrol/head.ascx" TagName="head" TagPrefix="uc1" %>
-
-<%@ Register Src="Usercontrol/buttom.ascx" TagName="buttom" TagPrefix="uc2" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">

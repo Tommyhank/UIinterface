@@ -31,9 +31,10 @@
     </div>
     <div class="Buttom">
         <h2>Follow us</h2>
+        &nbsp;
         <a href="http://www.facebook.com/"><img src="Image/facebook.jpg" style="width: 70px; height: 70px"/></a>
         <a href="http://www.twitter.com/"><img src="Image/twitter.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
-        <a href="http://renren.com"><img src="Image/renren.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>    
+        <a href="http://renren.com"><img src="Image/renren.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>   
     </div>
 </body>
 </html>
