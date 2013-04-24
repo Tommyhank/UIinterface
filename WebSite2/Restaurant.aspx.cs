@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlClient;
 public partial class WebSite2_Default2 : System.Web.UI.Page
 {
-    String RestaurantName = null;
-    String UserName = null;
+    static String RestaurantName = null;
+    static String UserName = null;
     protected void Page_Load(object sender, EventArgs e)
     {
         
@@ -16,7 +17,7 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
         {
             RestaurantName = Session["Restaurantname"].ToString();
             LabelRname.Text = RestaurantName;
-            Session.Remove("Restaurantname");
+            //Session.Remove("Restaurantname");
             Image1.ImageUrl = "~/WebSite2/Image/BU Central/" + RestaurantName + ".jpg";
             string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
             string selectString = "SELECT * FROM tb_Restaurant WHERE Name='" + RestaurantName +"'";//select string for search currency name correspond with the input
@@ -56,6 +57,17 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         DateTime date = DateTime.Now;
-        SqlDataSource1.Insert();
+        string content = TextBox1.Text;
+        string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
+        SqlConnection conn = new SqlConnection(conString);
+        conn.Open();
+        SqlCommand cmd = conn.CreateCommand();
+        cmd.CommandText = "INSERT INTO tb_Review (Rname, Uname, Content, Date)VALUES ('"+ RestaurantName+"', '"+ UserName+ "', '"+content+"', '"+date+"')";
+        cmd.ExecuteNonQuery();
+        conn.Close();
+        TextBox1.Visible = false;
+        Button1.Visible = false;
+        //string selectString = "INSERT INTO tb_Review (Rname, Uname, Content, Date)VALUES ('RestaurantName', 'Username', 'content', 'date')";//select string for search currency name correspond with the input
+        //SqlDataSource dsrc = new SqlDataSource(conString, selectString);
     }
 }
