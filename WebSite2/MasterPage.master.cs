@@ -20,7 +20,16 @@ public partial class WebSite2_MasterPage : System.Web.UI.MasterPage
         }
         catch (Exception ex)
         {
-
+            Console.WriteLine(ex.ToString());
+        }
+        try
+        {
+            Label1.Text = "Hello, Welcome first time: " + Session["RegisterInfo"].ToString() + "!";
+            Label1.Visible = true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
         }
     }
 }

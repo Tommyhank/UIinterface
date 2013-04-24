@@ -45,13 +45,12 @@ public partial class WebSite2_Register : System.Web.UI.Page
 
                 //int ID = (int) DV.Table.Rows[0][0];
                 //Console.Write(ID);
-
+                Session["RegisterName"] = username.Text.Trim();
                 username.Text = String.Empty;
                 email.Text = String.Empty;
                 password.Text = String.Empty;
                 passwordConfirm.Text = String.Empty;
                 Label1.Text = "Hi, "+ Call.Text.Trim() +"! Register Succeed! Please login";
-
                 Response.Redirect("~/WebSite2/Login.aspx");
             }
         }

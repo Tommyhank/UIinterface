@@ -10,6 +10,7 @@ public partial class WebSite2_Logout : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Session.Remove("Username");
+        Session.Remove("Call");
         Literal1.Text = "Log out successfully! Redirecting to homepage.";
 
         //Response.Redirect("Default.aspx");

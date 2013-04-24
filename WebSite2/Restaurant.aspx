@@ -4,7 +4,7 @@
     <style type="text/css">
         #form1
         {
-            height: 1978px;
+            height: 1999px;
             font-family: "bradley Hand ITC";
             font-size: xx-large;
             font-weight: bolder;
@@ -466,7 +466,7 @@
             }
             addLoadEvent(initLightbox);	// run initLightbox onLoad
         </script>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 2 [Uname], [Content], [Date], [Rate] FROM [tb_Review] WHERE ([Rname] = @Rname) ORDER BY [Date] DESC">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Top 2 [Uname], [Content], [Date], [Rate] FROM [tb_Review] WHERE ([Rname] = @Rname) ORDER BY [ID] DESC">
             <SelectParameters>
                 <asp:SessionParameter Name="Rname" SessionField="Restaurantname" Type="String" />
             </SelectParameters>
@@ -552,9 +552,12 @@
                 <br />
             </ItemTemplate>
         </asp:DataList>
-        <br />
+        
         <div style="height:128px;width:600px;margin-left:auto; margin-right:auto;">
-            <asp:TextBox ID="TextBox1" runat="server" Height="95px" Width="599px" TextMode="MultiLine"></asp:TextBox>
+            <asp:Label ID="LabelReviewContent" runat="server" Text="Your Review:"></asp:Label><br />
+            <asp:TextBox ID="TextBox1" runat="server" Height="95px" Width="599px" TextMode="MultiLine"></asp:TextBox><br />
+            <asp:Label ID="LabelReviewRate" runat="server" Text="Your Rate:(with full of 5 credits)"></asp:Label>
+            <asp:TextBox ID="TextBoxRate" runat="server" Height="25px" Width="75px"></asp:TextBox>
             <br />
             <asp:Button ID="Button1" runat="server" CssClass="Button"  Height="32px" Text="Comment" Width="123px" OnClick="Button1_Click" />
         </div>

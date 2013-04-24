@@ -24,7 +24,7 @@ public partial class WebSite2_About : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-
+            Console.WriteLine(ex.ToString());
         }
     }
 }
