@@ -9,7 +9,7 @@ last edit Jul 11 2006
     border-color: inherit;
     border-width: 0;
     padding: 0;
-    margin: 0 0 0 3px;
+    margin: 0 0 0 1px;
 }
 
 
@@ -30,7 +30,7 @@ last edit Jul 11 2006
 }
 
 #album{
-	width: 800px;
+	width: 780px;
 	<-!background: #EEEEEE;->
 	margin: 0.4em auto .5em auto;
 	font-size: 100%;
@@ -52,14 +52,14 @@ last edit Jul 11 2006
 #thumbs{
 	height: 80px;
 	clear: left;
-	width: 800px;
+	width: 781px;
 	margin: 0 auto;
 	overflow: auto;
 	overflow-y:hidden;
     }
 	
 #thumbs ul{
-	width: 793px;
+	width: 780px;
 	padding: 5px 0;
 }
 	

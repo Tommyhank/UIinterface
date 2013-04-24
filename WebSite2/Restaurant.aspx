@@ -4,7 +4,7 @@
     <style type="text/css">
         #form1
         {
-            height: 1998px;
+            height: 1978px;
             font-family: "bradley Hand ITC";
             font-size: xx-large;
             font-weight: bolder;
@@ -466,8 +466,6 @@
             }
             addLoadEvent(initLightbox);	// run initLightbox onLoad
         </script>
-        <script src="JS/album.js" type="text/javascript"></script>
-        <script src="JS/lightbox.js" type="text/javascript"></script>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 2 [Uname], [Content], [Date], [Rate] FROM [tb_Review] WHERE ([Rname] = @Rname) ORDER BY [Date] DESC">
             <SelectParameters>
                 <asp:SessionParameter Name="Rname" SessionField="Restaurantname" Type="String" />
@@ -497,7 +495,7 @@
             <div id="album" >
                 <link href="CSS%20style/album.css" rel="stylesheet" />
                 <div id="pic"">
-                    <h1 style="font-size: 1.5em; text-align: center; padding: 1em; height: 1px; margin-left:auto;margin-right:auto">Album</h1>
+                    <h1 style="font-size: 1.5em; text-align: center; padding: 1em; height: 1px; margin-left:auto;margin-right:auto">Yummy! Album</h1>
                     <a href="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" rel="lightbox" id="ShowLightBox">
                         <img src="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" alt="点击查看完全尺寸" id="placeholder" style="margin-left:auto;margin-right:auto" /></a>
                 </div>
@@ -531,7 +529,7 @@
         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" GridLines="Horizontal" Height="16px" RepeatColumns="1" RepeatDirection="Horizontal" Width="600px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center">
             <FooterStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
             <FooterTemplate>
-                <asp:Button ID="Button1" runat="server" CssClass="Button"  Height="32px" Text="Find more" Width="123px" />
+                <asp:Button ID="ButtonMore" runat="server" CssClass="Button"  Height="32px" Text="Find more" Width="123px" OnClick="ButtonMore_Click" />
             </FooterTemplate>
             <HeaderStyle Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="True" />
             <HeaderTemplate>
@@ -555,9 +553,6 @@
             </ItemTemplate>
         </asp:DataList>
         <br />
-        <br />
-
-
         <div style="height:128px;width:600px;margin-left:auto; margin-right:auto;">
             <asp:TextBox ID="TextBox1" runat="server" Height="95px" Width="599px" TextMode="MultiLine"></asp:TextBox>
             <br />

@@ -76,4 +76,10 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
         //string selectString = "INSERT INTO tb_Review (Rname, Uname, Content, Date)VALUES ('RestaurantName', 'Username', 'content', 'date')";//select string for search currency name correspond with the input
         //SqlDataSource dsrc = new SqlDataSource(conString, selectString);
     }
+    protected void ButtonMore_Click(object sender, EventArgs e)
+    {
+        Session["Restaurantname"] = RestaurantName;
+        Session["Username"] = UserName;
+        Server.Transfer("MoreReviews.aspx");
+    }
 }
