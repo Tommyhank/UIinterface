@@ -33,7 +33,7 @@
         </asp:ContentPlaceHolder>
     </div>
     <div class="Buttom">
-        <h2>Follow us</h2>
+        <asp:Label ID="Label4" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Follow Us</a></asp:Label><br />
         &nbsp;
         <a href="http://www.facebook.com/"><img src="Image/facebook.jpg" style="width: 70px; height: 70px"/></a>
         <a href="http://www.twitter.com/"><img src="Image/twitter.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>

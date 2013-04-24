@@ -24,6 +24,7 @@ public partial class Login : System.Web.UI.Page
             {
                 //Label1.Text = "Congratulations! Login succeed! Please wait for redirect to Homepage!";
                 Session["Username"] = Login1.UserName;
+                Session["Call"] = DV.Table.Rows[0][1].ToString();
                 Server.Transfer("~/WebSite2/Default.aspx");
                 //Response.Write("<script language=javascript>alert('Congratulations! Login succeed!')</script>");
                 //System.Threading.Thread.Sleep(5000);
@@ -56,12 +57,10 @@ public partial class Login : System.Web.UI.Page
         if (DV.Table.Rows.Count > 0)
         {
 
-            Session["UserName"] = PasswordRecovery1.UserName;
+            Session["UserForgetName"] = PasswordRecovery1.UserName;
             Server.Transfer("ForgetPassword.aspx");
         }
         else
             PasswordRecovery1.UserNameFailureText = "Username not exists! ";
-        
-            
     }
 }

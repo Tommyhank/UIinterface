@@ -13,7 +13,7 @@
         #placeholder
         {
             width: 500px;
-            height: 395px;
+            height: 500px;
         }
     </style>
 </asp:Content>
@@ -468,7 +468,7 @@
         </script>
         <script src="JS/album.js" type="text/javascript"></script>
         <script src="JS/lightbox.js" type="text/javascript"></script>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Uname], [Content], [Date], [Rate] FROM [tb_Review] WHERE ([Rname] = @Rname)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 2 [Uname], [Content], [Date], [Rate] FROM [tb_Review] WHERE ([Rname] = @Rname) ORDER BY [Date] DESC">
             <SelectParameters>
                 <asp:SessionParameter Name="Rname" SessionField="Restaurantname" Type="String" />
             </SelectParameters>
@@ -479,7 +479,7 @@
             <br />
             <br />
         </div>
-        <div class="restaurantintro">
+        <div class="restaurantintro" style=" height:233px">
             <asp:Label ID="Label4" runat="server" Text="Restaurant: " CssClass="intro"></asp:Label>
             <asp:Label ID="LabelRname" runat="server" Text="RestaurantName" CssClass="intro"></asp:Label><br />
             <asp:Label ID="Label5" runat="server" Text="Contact: " CssClass="intro"></asp:Label>
@@ -490,19 +490,18 @@
             <asp:Label ID="LabelCuisine" runat="server" Text="RestaurantCuisine" CssClass="intro"></asp:Label><br />
             <asp:Label ID="Label8" runat="server" Text="Rate: " CssClass="intro"></asp:Label>
             <asp:Label ID="LabelRate" runat="server" Text="RestaurantRate" CssClass="intro"></asp:Label><br />
+        </div>
             <asp:Label ID="Label9" runat="server" Text="Description: " CssClass="intro"></asp:Label>
             <asp:Label ID="LabelDescription" runat="server" Text="RestaurantDescription" CssClass="intro"></asp:Label>
-        </div>
-        <div class="dishes">
-            <br />
-            <h1 style="font-size: 1.5em; text-align: center; padding: 1em; height: 20px;">Album</h1>
+        
             <div id="album" >
                 <link href="CSS%20style/album.css" rel="stylesheet" />
-                <div id="pic" style="margin-left: auto; margin-right: auto;">
-                    <a href="Image/BU Central/McDonalds.jpg" rel="lightbox" id="ShowLightBox">
-                        <img src="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" alt="点击查看完全尺寸" id="placeholder" /></a>
+                <div id="pic"">
+                    <h1 style="font-size: 1.5em; text-align: center; padding: 1em; height: 1px; margin-left:auto;margin-right:auto">Album</h1>
+                    <a href="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" rel="lightbox" id="ShowLightBox">
+                        <img src="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" alt="点击查看完全尺寸" id="placeholder" style="margin-left:auto;margin-right:auto" /></a>
                 </div>
-                <p id="desc">Mc</p>
+                <p id="desc">McDonald's Hot Food</p>
                 <div id="thumbs">
                     <ul>
                         <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Angus-Deluxe-Snack-Wrap.png" title="Deluxe-Snack-Wrap">
@@ -517,14 +516,30 @@
                             <img src="Image/restaurant/Mc/mcdonalds-Premium-Roast-Iced-Coffee-Smallssssssssss.png" alt="Mc" /></a></li>
                         <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Small-French-Fries.png" title="French-Fries">
                             <img src="Image/restaurant/Mc/mcdonalds-Small-French-Friessssssssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Vanilla-Reduced-Fat-Ice-Cream-Cone.png" title="French-Fries">
+                            <img src="Image/restaurant/Mc/mcdonalds-Vanilla-Reduced-Fat-Ice-Cream-Conesssssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Bacon-Egg-Cheese-Biscuit-Regular-Size-Biscuit.png" title="French-Fries">
+                            <img src="Image/restaurant/Mc/mcdonalds-Bacon-Egg-Cheese-Biscuit-Regular-Size-Biscuitsssssssssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-Fish-McBites-Happy-Meals.png" title="French-Fries">
+                            <img src="Image/restaurant/Mc/mcdonalds-Fish-McBites-Happy-Mealssssssssss.png" alt="Mc" /></a></li>
+                        <li><a onclick="return showPic(this);" href="Image/restaurant/Mc/mcdonalds-McFlurry-with-MMS-Candies-12-fl-oz-cup.png" title="French-Fries">
+                            <img src="Image/restaurant/Mc/mcdonalds-McFlurry-with-MMS-Candies-12-fl-oz-cupssssssssssss.png" alt="Mc" /></a></li>
                     </ul>
                 </div>
             </div>
-        </div>
         <br />
-        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" GridLines="Horizontal" Height="261px" RepeatColumns="2" RepeatDirection="Horizontal" Width="529px">
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" GridLines="Horizontal" Height="16px" RepeatColumns="1" RepeatDirection="Horizontal" Width="600px" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center">
+            <FooterStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
+            <FooterTemplate>
+                <asp:Button ID="Button1" runat="server" CssClass="Button"  Height="32px" Text="Find more" Width="123px" />
+            </FooterTemplate>
+            <HeaderStyle Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="True" />
+            <HeaderTemplate>
+                Recent Reviews:
+            </HeaderTemplate>
+            <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
             <ItemTemplate>
-                Uname:
+                User:
                 <asp:Label ID="UnameLabel" runat="server" Text='<%# Eval("Uname") %>' />
                 <br />
                 Content:
@@ -539,12 +554,14 @@
                 <br />
             </ItemTemplate>
         </asp:DataList>
+        <br />
+        <br />
 
 
-        <div>
-            <asp:TextBox ID="TextBox1" runat="server" Height="95px" Width="527px"></asp:TextBox>
+        <div style="height:128px;width:600px;margin-left:auto; margin-right:auto;">
+            <asp:TextBox ID="TextBox1" runat="server" Height="95px" Width="599px" TextMode="MultiLine"></asp:TextBox>
             <br />
-            <asp:Button ID="Button1" runat="server" CssClass="heading2" Height="32px" Text="Comment" Width="123px" OnClick="Button1_Click" />
+            <asp:Button ID="Button1" runat="server" CssClass="Button"  Height="32px" Text="Comment" Width="123px" OnClick="Button1_Click" />
         </div>
     </form>
 </asp:Content>

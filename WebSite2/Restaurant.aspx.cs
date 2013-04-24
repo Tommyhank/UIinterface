@@ -10,9 +10,9 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
 {
     static String RestaurantName = null;
     static String UserName = null;
+    static String UserCall = null;
     protected void Page_Load(object sender, EventArgs e)
     {
-        
         try
         {
             RestaurantName = Session["Restaurantname"].ToString();
@@ -37,8 +37,9 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
         try
         {
             UserName = Session["Username"].ToString();
+            UserCall = Session["Call"].ToString();
             string conString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Yummy.mdf;Integrated Security=True";
-            string selectString = "SELECT * FROM tb_Review WHERE Uname='" + UserName + "' AND Rname='" + RestaurantName + "'";//select string for search currency name correspond with the input
+            string selectString = "SELECT * FROM tb_Review WHERE Uname='" + UserCall + "' AND Rname='" + RestaurantName + "'";//select string for search currency name correspond with the input
             SqlDataSource dsrc = new SqlDataSource(conString, selectString);
             DataView DV = (DataView)dsrc.Select(DataSourceSelectArguments.Empty);
             if (DV.Table.Rows.Count > 0)
@@ -62,11 +63,16 @@ public partial class WebSite2_Default2 : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(conString);
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
-        cmd.CommandText = "INSERT INTO tb_Review (Rname, Uname, Content, Date)VALUES ('"+ RestaurantName+"', '"+ UserName+ "', '"+content+"', '"+date+"')";
+        cmd.CommandText = "INSERT INTO tb_Review (Rname, Uname, Content, Date)VALUES ('" + RestaurantName + "', '" + Session["Call"] + "', '" + content + "', '" + date + "')";
         cmd.ExecuteNonQuery();
         conn.Close();
         TextBox1.Visible = false;
         Button1.Visible = false;
+        
+        Session["Restaurantname"] = RestaurantName;
+        Session["Username"] = UserName;
+        Server.Transfer("Restaurant.aspx");
+        //Response.Redirect(Request.Url.ToString()); 
         //string selectString = "INSERT INTO tb_Review (Rname, Uname, Content, Date)VALUES ('RestaurantName', 'Username', 'content', 'date')";//select string for search currency name correspond with the input
         //SqlDataSource dsrc = new SqlDataSource(conString, selectString);
     }
