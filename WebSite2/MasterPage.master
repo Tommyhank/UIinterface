@@ -17,7 +17,10 @@
             <a href="Default.aspx" style="color: #FFFFFF; text-decoration: none">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         <asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="AboutUs.aspx" style="text-decoration: none;color:#FFFFFF">About Us</a> 
         </div>
+        
         <asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Login</a></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Sign in</a></asp:Label>
@@ -34,7 +37,8 @@
         &nbsp;
         <a href="http://www.facebook.com/"><img src="Image/facebook.jpg" style="width: 70px; height: 70px"/></a>
         <a href="http://www.twitter.com/"><img src="Image/twitter.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
-        <a href="http://renren.com"><img src="Image/renren.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>   
+        <a href="http://renren.com"><img src="Image/renren.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
+        
     </div>
 </body>
 </html>
