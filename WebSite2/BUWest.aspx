@@ -1,16 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BUWest.aspx.cs" Inherits="WebSite2_BUWest" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/WebSite2/MasterPage.master" AutoEventWireup="true" CodeFile="BUCentral.aspx.cs" Inherits="WebSite2_BUCentral" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+        <div class="BUcentral">
+            <asp:ImageButton ID="ImageButton8" runat="server" Height="233px" ImageUrl="~/WebSite2/Image/BU East/bonchon.JPG" Width="310px" OnClick="ImageButton8_Click" />
+            <asp:ImageButton ID="ImageButton5" runat="server" Height="233px" ImageUrl="~/WebSite2/Image/BU East/frozen yougert.jpg" Width="310px" />
+            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="Image/BU%20East/cheesecakefactory.jpg" OnClick="ImageButton2_Click" />
+            <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/WebSite2/Image/BU East/fogo.jpg" />
+            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/WebSite2/Image/BU East/currito.jpg" OnClick="ImageButton3_Click" />
+            <asp:ImageButton ID="ImageButton6" runat="server" Height="233px" ImageUrl="~/WebSite2/Image/BU East/ginger.png" Width="310px" />
+            
     </form>
-</body>
-</html>
+</asp:Content>
+
