@@ -4,7 +4,7 @@
     <style type="text/css">
         #form1
         {
-            height: 1999px;
+            height: 2544px;
             font-family: "bradley Hand ITC";
             font-size: xx-large;
             font-weight: bolder;
@@ -19,6 +19,50 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <form id="form1" runat="server">
+            <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC-WYGMf6ZQK2L7E1eZlInlJVHzipQ5fww&sensor=true">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            var geocoder = new google.maps.Geocoder();
+            var address = "8 Saint Mary St, Boston";
+            var latitude = null;
+            var longitude = null;
+            var marker;
+            var LatLng = null;
+
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    latitude = results[0].geometry.location.lat();
+                    longitude = results[0].geometry.location.lng();
+                    //alert("latitude=" + latitude + ",longitude=" + longitude);
+                    LatLng = new google.maps.LatLng(latitude, longitude);
+                    if (latitude && longitude) {
+                        //marker = new google.maps.Marker("WOcao");//GMarker(new GLatLng(latitude, longitude));
+                        var mapOptions = {
+                            center: new google.maps.LatLng(latitude, longitude),
+                            zoom: 8,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+
+                        var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                        map.setCenter(LatLng);
+                        map.setZoom(18);
+                        // Set marker also
+                        marker = new google.maps.Marker({
+                            position: LatLng,
+                            map: map,
+                            title: address,
+                        });
+
+                        //map.addOverlay(marker);
+                    }
+                }
+            });
+
+
+        }window.onload=initialize;
+    </script>
         <script>
             function showPic(whichpic) {
                 if (document.getElementById) {
@@ -530,6 +574,8 @@
             <FooterStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
             <FooterTemplate>
                 <asp:Button ID="ButtonMore" runat="server" CssClass="Button"  Height="32px" Text="Find more" Width="123px" OnClick="ButtonMore_Click" />
+                <br />
+
             </FooterTemplate>
             <HeaderStyle Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="True" />
             <HeaderTemplate>
@@ -552,6 +598,7 @@
                 <br />
             </ItemTemplate>
         </asp:DataList>
+        <div id="map_canvas" onload="initialize()" style="width:600px;height:500px;margin-left:auto;margin-right:auto"></div>
         
         <div style="height:128px;width:600px;margin-left:auto; margin-right:auto;">
             <asp:Label ID="LabelReviewContent" runat="server" Text="Your Review:"></asp:Label><br />

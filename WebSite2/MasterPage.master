@@ -14,7 +14,7 @@
     </div>
     <div class="heading2">
         <div style="float: left">
-            <a href="Default.aspx" style="color: #FFFFFF; text-decoration: none">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Default.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.background='#ff0000'" onmouseout="this.style.background='#FF6600'">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         <asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
