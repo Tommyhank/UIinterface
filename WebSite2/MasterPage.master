@@ -14,26 +14,26 @@
     </div>
     <div class="heading2">
         <div style="float: left">
-            <a href="Default.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.background='#ff0000'" onmouseout="this.style.background='#FF6600'">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Default.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         <asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="AboutUs.aspx" style="text-decoration: none;color:#FFFFFF">About Us</a> 
+            <a href="AboutUs.aspx" style="text-decoration: none;color:#FFFFFF" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">About Us</a> 
         </div>
         
-        <asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Login</a></asp:Label>
+        <asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Login</a></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Sign in</a></asp:Label>
+            <asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Sign in</a></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            <asp:Label ID="Label3" runat="server"><a href="Register.aspx" style="color: #FFFFFF; text-decoration: none">Join Us</a></asp:Label>
-        <asp:Label ID="L2"  runat="server" Visible="False"><a href ="Logout.aspx" style="color: #FFFFFF; text-decoration: none">Log out</a></asp:Label>
+            <asp:Label ID="Label3" runat="server"><a href="Register.aspx" style="color: #FFFFFF; text-decoration: none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Join Us</a></asp:Label>
+        <asp:Label ID="L2"  runat="server" Visible="False"><a href ="Logout.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Log out</a></asp:Label>
     </div>
     <div class="page">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
     <div class="Buttom">
-        <asp:Label ID="Label4" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none">Follow Us</a></asp:Label><br />
+        <asp:Label ID="Label4" runat="server"><a style="color:#FFFFFF;text-decoration:none">Follow Us</a></asp:Label><br />
         &nbsp;
         <a href="http://www.facebook.com/"><img src="Image/facebook.jpg" style="width: 70px; height: 70px"/></a>
         <a href="http://www.twitter.com/"><img src="Image/twitter.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
