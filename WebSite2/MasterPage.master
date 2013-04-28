@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="CSS%20style/stylesheet.css" rel="stylesheet" />
+    <link href="CSS%20style/Menu.css" rel="stylesheet" type="text/css" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -14,20 +15,34 @@
     </div>
     <div class="heading2">
         <div style="float: left">
-            <a href="Default.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
-        <asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="AboutUs.aspx" style="text-decoration: none;color:#FFFFFF" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">About Us</a> 
+        
         </div>
         
-        <asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Login</a></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Sign in</a></asp:Label>
+       
+            
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            <asp:Label ID="Label3" runat="server"><a href="Register.aspx" style="color: #FFFFFF; text-decoration: none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Join Us</a></asp:Label>
-        <asp:Label ID="L2"  runat="server" Visible="False"><a href ="Logout.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Log out</a></asp:Label>
+            <asp:Label ID="L2"  runat="server" Visible="False"><a href ="Logout.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Log out</a></asp:Label>
     </div>
+<div class="heading2">
+<ul id="menu">
+<li><a href="Default.aspx"  onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'" style="color:#FFFFFF" >Home</a></li>
+<li>
+<asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label>
+<ul>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Graphic design</a></li>
+<li><a href="#">Development tools</a></li>
+<li><a href="#">Web design</a></li>
+</ul>
+</li>
+<li> <a href="AboutUs.aspx" style="color:#FFFFFF" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">About Us</a></li>
+<li><asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Welcome</a></asp:Label></li>
+<li><asp:Label ID="Label2" runat="server"><a href ="Login.aspx" style="color:#FFFFFF"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Sign in</a></asp:Label></li>
+<li><asp:Label ID="Label3" runat="server"><a href="Register.aspx" style="color: #FFFFFF"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Join Us</a></asp:Label>
+</li>
+</ul>
+</div>
     <div class="page">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
@@ -38,7 +53,10 @@
         <a href="http://www.facebook.com/"><img src="Image/facebook.jpg" style="width: 70px; height: 70px"/></a>
         <a href="http://www.twitter.com/"><img src="Image/twitter.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
         <a href="http://renren.com"><img src="Image/renren.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
-        
+        <a href="http://yelp.com"><img src="Image/Yelp.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
+        <a href="http://youtube.com"><img src="Image/Youtube.jpg" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
+        <a href="http://msn.com"><img src="Image/" style="width: 70px; height: 70px; position: relative; left: 4px" /></a>
+
     </div>
 </body>
 </html>
