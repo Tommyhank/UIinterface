@@ -13,23 +13,20 @@
 
 #menu li
 {
-float: left;
-padding:10px;
-position: relative;
+    padding: 10px 20px 10px 20px;
+    float: left;
+    text-align: center;
+    width: auto;
 }
-
 #menu a
 {
-float: left;
-height:25px;
-padding:025px;
-color:#999;
-text-transform: uppercase;
-font: bold 12px/25pxArial,Helvetica;
-text-decoration: none;
-text-shadow:#000;
+    float: left;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font: bold 12px/25pxArial,Helvetica;
+    text-decoration: none;
+    text-shadow: #000;
 }
-
 #menu li:hover > a
 {
 color:#fafafa;
@@ -40,10 +37,10 @@ color:#fafafa;
 color:#fafafa;
 }
 
-#menu li:hover > ul
+    #menu li:hover > ul
 {
-display: block;
-}
+        display: run-in;
+    }
 
 /* Sub-menu */
 
