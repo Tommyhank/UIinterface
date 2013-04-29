@@ -16,16 +16,25 @@
 <div class="heading2">
 <ul id="menu">
 <li><a href="Default.aspx"  onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'" style="color:#FFFFFF" >Home</a></li>
-<li><a href="#">Area</a>
+<li><a href="#" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Area</a>
 <ul>
     <br><br>
-<li><a href="#">BU West</a></li>
-<li><a href="#">BU Central</a></li>
-<li><a href="#">BU East</a></li>
-<li><a href="#">Around BU</a></li>
+<li><a href="BUWest.aspx">BU West</a></li>
+<li><a href="BUCentral.aspx">BU Central</a></li>
+<li><a href="BUEast.aspx">BU East</a></li>
+<li><a href="AroundBU.aspx">Around BU</a></li>
 </ul>
 </li>
-<li> <a href="AboutUs.aspx" style="color:#FFFFFF" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">About Us</a></li>
+<li> <a href="AboutUs.aspx" style="color:#FFFFFF" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">About Us</a>
+<ul>
+    <br><br>
+<li><a href="#">Yehuan Huang</a></li>
+<li><a href="#">Shu Li</a></li>
+<li><a href="#">Qilong Tang</a></li>
+<li><a href="#">Kaize Qin</a></li>
+<li><a href="AboutUs.aspx">Our Group</a></li> 
+</ul>
+</li>
 <li><asp:Label ID="L1" Text="&lt;a href=&quot;About.aspx&quot; style=&quot;color:#FFFFFF;text-decoration:none&quot;&gt;Profile&lt;/a&gt;" runat="server" Visible="False"></asp:Label></li>
 <li><asp:Label ID="Label1" runat="server" Visible="False"><a href ="Login.aspx" style="color:#FFFFFF;text-decoration:none"onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Welcome</a></asp:Label></li>
 <li><asp:Label ID="L2"  runat="server" Visible="False"><a href ="Logout.aspx" style="color: #FFFFFF; text-decoration: none" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">Log out</a></asp:Label></li>
