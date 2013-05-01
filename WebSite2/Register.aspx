@@ -39,7 +39,7 @@
 
         </div>
 
-        <div class="bodyword">
+        <div class="bodyword" style="width:400px; margin-left:auto;margin-right:auto">
             Create a new account
             <p>
                 Username:

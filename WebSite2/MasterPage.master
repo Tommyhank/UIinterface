@@ -28,9 +28,9 @@
 <li> <a href="AboutUs.aspx" style="color:#FFFFFF" onmouseover="this.style.color='#ff0000'" onmouseout="this.style.color='#FFFFFF'">About Us</a>
 <ul>
     <br><br>
-<li><a href="#">Yehuan Huang</a></li>
-<li><a href="#">Shu Li</a></li>
-<li><a href="#">Qilong Tang</a></li>
+<li><a href="https://www.facebook.com/huangyehuan">Yehuan Huang</a></li>
+<li><a href="https://www.facebook.com/iris.lee.3114935">Shu Li</a></li>
+<li><a href="https://www.facebook.com/qilong.tang.9">Qilong Tang</a></li>
 <li><a href="#">Kaize Qin</a></li>
 <li><a href="AboutUs.aspx">Our Group</a></li> 
 </ul>

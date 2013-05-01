@@ -4,14 +4,15 @@
     <style type="text/css">
         #form1
         {
-            height: 398px;
+            height: 435px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="form1" runat="server">
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]"></asp:SqlDataSource>
-            <div class ="bodyword">
+        <div style="width:400px;margin-left:auto;margin-right:auto">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]"></asp:SqlDataSource>
+            <div class="bodyword">
                 <p>Personal Information</p>
                 Call:
             <asp:Label ID="Call" runat="server"></asp:Label>
@@ -31,8 +32,11 @@
                 <br />
                 Address Area:
                 <asp:Label ID="area" runat="server"></asp:Label>
-            </div>    
-        <br />
+                <br /><br />
+                <asp:Button ID="Edit" runat="server" CssClass="Button"  Height="32px"  Width="123px" Text="Edit" />
+            </div>
+            <br />
+        </div>
     </form>
 </asp:Content>
 
