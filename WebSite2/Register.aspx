@@ -20,7 +20,7 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]" InsertCommand="INSERT INTO tb_Userinfo(Call, gender, email, phone, Username, Pwd, SecurityQuestion, Answer, area) VALUES (@newCall, @newgender, @newemail, @newphone, @newusername, @newpassword, @newSQ, @newanswer, @newarea)">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]" InsertCommand="INSERT INTO tb_Userinfo(Call, gender, email, phone, Username, Pwd, SecurityQuestion, Answer, area) VALUES (@newCall, @newgender, @newemail, @newphone, @newusername, @newpassword, @newSQ, @newanswer, @newarea)" UpdateCommand="UPDATE tb_Userinfo SET Call = @call, email = @email, gender = @gender, area = @area, phone = @phone, Pwd = @password where Username = @username">
                 <InsertParameters>
                     <asp:ControlParameter ControlID="Call" Name="newCall" PropertyName="Text" />
                     <asp:ControlParameter ControlID="RadioGenderList" Name="newgender" PropertyName="SelectedValue" />
@@ -32,6 +32,16 @@
                     <asp:ControlParameter ControlID="Answer" DefaultValue="" Name="newanswer" PropertyName="Text" />
                     <asp:ControlParameter ControlID="RadioAreaList" Name="newarea" PropertyName="SelectedValue" />
                 </InsertParameters>
+                <UpdateParameters>
+                    <asp:ControlParameter ControlID="Call" Name="call" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="email" Name="email" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="Phone" Name="phone" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="RadioAreaList" Name="area" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="RadioGenderList" Name="gender" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="password" Name="password" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="passwordConfirm" Name="cpassword" PropertyName="Text" />
+                    <asp:SessionParameter Name="username" SessionField="Username" />
+                </UpdateParameters>
             </asp:SqlDataSource>
 
             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_SecurityQuestion]"></asp:SqlDataSource>

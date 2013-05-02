@@ -19,12 +19,16 @@ public partial class WebSite2_About : System.Web.UI.Page
             Call.Text = DV.Table.Rows[0][1].ToString();
             Gender.Text = DV.Table.Rows[0][2].ToString();
             email.Text = DV.Table.Rows[0][3].ToString();
-            phone.Text = DV.Table.Rows[0][4].ToString();
-            area.Text = DV.Table.Rows[0][5].ToString();
+            phone.Text = DV.Table.Rows[0][5].ToString();
+            area.Text = DV.Table.Rows[0][4].ToString();
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.ToString());
         }
+    }
+    protected void Edit_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("Register.aspx");
     }
 }

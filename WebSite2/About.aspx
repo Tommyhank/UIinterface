@@ -33,7 +33,7 @@
                 Address Area:
                 <asp:Label ID="area" runat="server"></asp:Label>
                 <br /><br />
-                <asp:Button ID="Edit" runat="server" CssClass="Button"  Height="32px"  Width="123px" Text="Edit" />
+                <asp:Button ID="Edit" runat="server" CssClass="Button"  Height="32px"  Width="123px" Text="Edit" OnClick="Edit_Click" />
             </div>
             <br />
         </div>
