@@ -22,14 +22,15 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tb_Userinfo]"></asp:SqlDataSource>
     <div>
     
-    </div>
+   
         <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate" BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" BorderPadding="4" ForeColor="#333333" Height="192px" TextLayout="TextOnTop" Width="308px">
             <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
             <LayoutTemplate>
                 <table cellpadding="4" cellspacing="0" style="border-collapse:collapse;">
                     <tr>
                         <td>
-                            <table cellpadding="0" style="height:192px;width:308px;">
+                            &nbsp;&nbsp;
+                            <table cellpadding="0" style="height:319px; width:950px;">
                                 <tr>
                                     <td align="center" class="auto-style2" style="color:White;background-color:#990000;font-size:0.9em;font-weight:bold;">Log In</td>
                                 </tr>
@@ -89,7 +90,7 @@
                 <table cellpadding="4" cellspacing="0" style="border-collapse:collapse;">
                     <tr>
                         <td>
-                            <table cellpadding="0" style="height:124px;width:308px;">
+                            <table cellpadding="0" style="height:124px;width:950px;">
                                 <tr>
                                     <td align="center" colspan="2" style="color:White;background-color:#990000;font-size:0.9em;font-weight:bold;">Forgot Your Password?</td>
                                 </tr>
@@ -122,6 +123,7 @@
             </UserNameTemplate>
         </asp:PasswordRecovery>
         <asp:Label ID="Label1" runat="server"></asp:Label>
+         </div>
     </form>
 
 </asp:Content>

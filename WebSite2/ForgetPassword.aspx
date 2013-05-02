@@ -66,7 +66,7 @@
                 <table cellpadding="4" cellspacing="0" style="border-collapse: collapse;">
                     <tr>
                         <td>
-                            <table cellpadding="0" style="height: 231px; width: 397px;">
+                            <table cellpadding="0" style="height: 231px; width: 950px;">
                                 <tr>
                                     <td align="center" colspan="2" style="color: White; background-color: #990000; font-size: 0.9em; font-weight: bold;">Enter your User Name to receive your password.</td>
                                 </tr>
